@@ -4,7 +4,10 @@ class ActorsController < ApplicationController
   end
 
   def show
-    @what_they_typed_after_the_slash = params[:action]
+
+    @actor_id = params[:id]
+
+    name.find_by({:id => @actor_id })
     # Your code goes here
     # Use the information after the slash in the URL to look up the actor with the corresponding ID number
     # Store the actor in the @actor instance variable so the view can format it
